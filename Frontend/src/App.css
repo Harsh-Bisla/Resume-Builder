@@ -1,0 +1,163 @@
+* {
+  scrollbar-width: none;
+}
+
+.resume-container {
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  color: #222;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.resume-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.resume-designation {
+  font-size: 14px;
+  font-style: italic;
+  color: #666;
+  margin-top: 4px;
+}
+
+.resume-summary {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.resume-divider {
+  margin: 16px 0;
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.resume-section-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.resume-list {
+  font-size: 14px;
+  color: #444;
+  list-style: disc;
+  padding-left: 18px;
+}
+
+.resume-item {
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.resume-skills {
+  font-size: 14px;
+  color: #444;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Resume template 2 */
+#resume-to-download {
+  width: 794px; /* ~210mm at 96dpi */
+  padding: 40px;
+  background: white;
+  color: black;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  margin: auto;
+}
+.resume {
+  width: 100%;
+  padding: 40px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+header {
+  text-align: center;
+  border-bottom: 2px solid #aaa;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+header p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+section h2 {
+  font-size: 20px;
+  border-left: 4px solid #444;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+.item {
+  margin-bottom: 15px;
+}
+
+.skills-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills-list li {
+  margin-bottom: 6px;
+}
+
+/* Loader */
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid purple;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-left: 4px solid #ff3d00;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
