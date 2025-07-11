@@ -27,15 +27,18 @@ function UserProvider({ children }) {
         return;
       }
 
-      const formData = new FormData();
-      formData.append("fullName", signUpInfo.fullName);
-      formData.append("email", signUpInfo.email);
-      formData.append("password", signUpInfo.password);
-      formData.append("avatar", avatar);
+      const formData = {
+        fullName: signUpInfo.fullName,
+        email: signUpInfo.email,
+        password: signUpInfo.password,
+      };
       setLoading(true);
       const res = await fetch(`${import.meta.env.VITE_BASE_URL}/user/signup`, {
         method: "POST",
-        body: formData,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       });
       const data = await res.json();
       setLoading(false);
@@ -114,7 +117,9 @@ function UserProvider({ children }) {
   }, [localStorage.getItem("token")]);
 
   return (
-    <userStore.Provider value={{ userSignup, userLogin, user, logoutUser, loading }}>
+    <userStore.Provider
+      value={{ userSignup, userLogin, user, logoutUser, loading }}
+    >
       {children}
     </userStore.Provider>
   );
