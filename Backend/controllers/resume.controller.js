@@ -7,11 +7,11 @@ const createResume = async (req, res) => {
     const userId = req.user.userId;
     if (!userId)
       return res
-        .status(400)
+        .status(401)
         .send({ message: "userId is required", success: false });
     if (!title)
       return res
-        .status(400)
+        .status(401)
         .send({ message: "title is required", success: false });
 
     await resumeModel.create({
