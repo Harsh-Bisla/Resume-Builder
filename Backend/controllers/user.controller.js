@@ -43,7 +43,7 @@ const signUp = async (req, res) => {
   } catch (error) {
     return res
       .status(500)
-      .send({ message: "Failed to Signup", success: false });
+      .send({ message: "Failed to Signup", success: false, error:error });
   }
 };
 
